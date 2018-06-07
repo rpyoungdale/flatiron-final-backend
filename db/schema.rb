@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 20180606180915) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
+    t.decimal "limit"
+    t.integer "budget_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -32,7 +34,6 @@ ActiveRecord::Schema.define(version: 20180606180915) do
     t.string "merchant"
     t.decimal "amount"
     t.integer "category_id"
-    t.integer "budget_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
