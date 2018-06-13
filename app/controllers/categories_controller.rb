@@ -8,7 +8,9 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    @category = Category.create(category_params)
+    # byebug
+    @category = Category.create(name: params[:name], limit: params[:limit], budget_id: params[:budget_id])
+    puts @category.errors.full_messages
     render json: @category, status: :accepted
   end
 
@@ -24,7 +26,7 @@ class CategoriesController < ApplicationController
   private
 
   def category_params
-    params.permit(:name)
+    params.permit(:name, :limit, :budget_id)
   end
 
   def find_category

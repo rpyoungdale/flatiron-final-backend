@@ -1,4 +1,4 @@
 class UserSerializer < ActiveModel::Serializer
-  has_one :budget
-  attributes :id, :first_name, :last_name, :username, :password, :budget
+  has_many :budgets
+  attributes :id, :first_name, :last_name, :username, :password, :budgets
 end
