@@ -29,7 +29,7 @@ class BudgetsController < ApplicationController
   private
 
   def budget_params
-    params.permit(:user_id, :balance)
+    params.permit(:user_id, :balance, :month, :year)
   end
 
   def find_user

@@ -8,8 +8,12 @@ class CategoriesController < ApplicationController
   end
 
   def create
+
     # byebug
     @category = Category.create(name: params[:name], limit: params[:limit], budget_id: params[:budget_id])
+    if params[:amount]
+      @transaction = Transaction.create(merchant: nil, amount: params[:amount], category_id: @category.id)
+    end
     puts @category.errors.full_messages
     render json: @category, status: :accepted
   end
