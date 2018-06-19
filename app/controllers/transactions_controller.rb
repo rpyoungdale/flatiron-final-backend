@@ -1,5 +1,5 @@
 class TransactionsController < ApplicationController
-  before_action :find_transaction, only: [:update]
+  before_action :find_transaction, only: [:destroy]
 
   def index
     @transactions = Transaction.all
@@ -19,6 +19,10 @@ class TransactionsController < ApplicationController
   #     render json: { errors: @transaction.errors.full_messages }, status: :unprocessible_entity
   #   end
   # end
+
+  def destroy
+    @transaction.destroy
+  end
 
   private
 

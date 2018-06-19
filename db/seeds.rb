@@ -10,8 +10,8 @@ User.create(first_name: 'Megan', last_name: 'Schmitz', username: 'mmschmitz', pa
 User.create(first_name: 'Eric', last_name: 'Youngdale', username: 'epyoungdale', password: 'e')
 User.create(first_name: 'Carol', last_name: 'Youngdale', username: 'cjyoungdale', password: 'c')
 
-Budget.create(user_id: 1, balance: 10000.00, month: "June", year: '2018')
-Budget.create(user_id: 1, balance: 10000.00, month: "May", year: '2018')
+Budget.create(user_id: 1, balance: 4000.00, month: "June", year: '2018')
+Budget.create(user_id: 1, balance: 4000.00, month: "May", year: '2018')
 Budget.create(user_id: 2, balance: 6000.00, month: "June", year: '2018')
 Budget.create(user_id: 3, balance: 70000.00, month: "June", year: '2018')
 Budget.create(user_id: 4, balance: 80000.00, month: "June", year: '2018')
